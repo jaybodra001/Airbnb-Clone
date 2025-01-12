@@ -3,8 +3,10 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import Avatar from '../Avatar';
 import { useCallback, useState } from 'react';
 import MenuItem from './MenuItem';
+import useRegisterModalStore from '@/app/hooks/useRegisterModal';
 
 const UserMenu = () => {
+    const registerModal = useRegisterModalStore()
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const toggleDropdown = useCallback(() => {
@@ -70,7 +72,7 @@ const UserMenu = () => {
                     >
                         <div className="flex flex-col cursor-pointer">
                             <MenuItem onClick={() => {}} label="Login" />
-                            <MenuItem onClick={() => {}} label="Sign up" />
+                            <MenuItem onClick={(registerModal.onOpen)} label="Sign up" />
                         </div>
                     </div>
                 )}
