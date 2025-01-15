@@ -4,15 +4,16 @@ import Navbar from "./components/navbar/Navbar";
 import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProvider from "./providers/ToasterProvider";
- 
+import LoginModal from "./components/modals/LoginModal";
+
 export const metadata = {
   title: "Aribnb",
   description: "Aribnb Clone",
 };
 
 const font = Nunito({
-  subsets:['latin'],
-})
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -24,10 +25,11 @@ export default function RootLayout({
       <body className="{font.className}">
         <ClientOnly>
           <ToasterProvider />
+          <LoginModal />
           <RegisterModal />
-           <Navbar />
+          <Navbar />
         </ClientOnly>
-        
+
         {children}
       </body>
     </html>
