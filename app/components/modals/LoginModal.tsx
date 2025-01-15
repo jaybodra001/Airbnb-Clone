@@ -21,7 +21,7 @@ import useLoginModal from "@/app/hooks/useLoginModal";
 
 //Custom Components
 import Heading from "../Heading";
-import Input from "../input/Input";
+import Input from "../inputs/Input";
 import Button from "../Button";
 
 //Toast
